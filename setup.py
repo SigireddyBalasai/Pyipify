@@ -19,8 +19,8 @@ def reqs():
 
 
 setup(
-    name="Ipify",
-    packages=['ipify', 'ipify.syncronous', 'ipify.asyncronous'],
+    name="PyIpify",
+    packages=['PyIpify', 'PyIpify.syncronous', 'PyIpify.asyncronous'],
     version="0.0.1",
     setup_requires=['setuptools_scm'],
     license="MIT",

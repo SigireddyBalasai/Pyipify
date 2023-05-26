@@ -1,4 +1,4 @@
-from ipify.syncronous import find_ipv4, find_ipv6
+from PyIpify.syncronous import find_ipv4, find_ipv6
 def main():
     ipv4 = find_ipv4()
     ipv6 = find_ipv6()
