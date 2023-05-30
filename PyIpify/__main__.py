@@ -1,7 +1,7 @@
-from .syncronous import find_ipv4 as sync_find_ipv4
-from .syncronous import find_ipv6 as sync_find_ipv6
-from .asyncronous import find_ipv4 as async_find_ipv4
-from .asyncronous import find_ipv6 as async_find_ipv6
+from Pyipify.syncronous import find_ipv4 as sync_find_ipv4
+from Pyipify.syncronous import find_ipv6 as sync_find_ipv6
+from Pyipify.asyncronous import find_ipv4 as async_find_ipv4
+from Pyipify.asyncronous import find_ipv6 as async_find_ipv6
 import argparse
 import asyncio
 
