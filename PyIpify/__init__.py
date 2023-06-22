@@ -1,1 +1,1 @@
-__all__ = ['asyncronous','syncronous']
+__all__ = ['asyncronous', 'syncronous']

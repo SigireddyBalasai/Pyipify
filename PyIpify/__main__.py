@@ -13,17 +13,17 @@ parser.add_argument("-a", "--asyncronous", help = "Use this flag to run the prog
 parser.add_argument("-s", "--syncronous", help = "Use this flag to run the program synchronously", action = "store_true", default = True)
 parser.add_argument("-o", "--output", help = "Use this flag to output the ip address to a file")
 args = parser.parse_args()
-if(args.asyncronous):
-    if(args.version == "ipv4"):
+if args.asyncronous:
+    if args.version == "ipv4":
         ip = asyncio.run(async_find_ipv4())
     else:
         ip = asyncio.run(async_find_ipv6())
 else:
-    if(args.version == "ipv4"):
+    if args.version == "ipv4":
         ip = sync_find_ipv4()
     else:
         ip = sync_find_ipv6()
-if(args.output):
+if args.output:
     with open(args.output, "w") as file:
         file.write(ip)
 print(ip)

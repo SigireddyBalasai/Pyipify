@@ -1,5 +1,6 @@
 import requests
 
+
 def find_ipv4():
     """Return the public IPv4 address of the system.
     This function is syncronous.
