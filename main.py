@@ -1,6 +1,7 @@
-from PyIpify.syncronous import find_ipv4, find_ipv6
+from PyIpify.synchronous import find_ipv4, find_ipv6
 
 
+# noinspection PyCallingNonCallable
 def main():
     ipv4 = find_ipv4()
     ipv6 = find_ipv6()

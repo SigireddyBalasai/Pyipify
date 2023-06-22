@@ -36,18 +36,18 @@ pip install Pyipify
     
 ## Examples
 
-get ip address syncronous
+get ip address synchronous
 
 ```py
-from Pyipify.syncronous import find_ipv4,find_ipv6
+from Pyipify.synchronous import find_ipv4,find_ipv6
 ipv4_address = find_ipv4()
 ipv6_address = find_ipv6()
 print(ipv4_address,ipv6_address)
 ```
 
-get ip address asyncronously
+get ip address asynchronously
 ```py
-from Pyipify.asyncronous import find_ipv4,find_ipv6
+from Pyipify.asynchronous import find_ipv4,find_ipv6
 import asyncio
 async def main():
     ipv4_address = await find_ipv4()
@@ -58,7 +58,7 @@ asyncio.run(main())
 
 use cli to get ip address
 ``` python -m ipify -h```
-to get strted
+to get started
 
 
 

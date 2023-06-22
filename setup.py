@@ -7,8 +7,8 @@ dir_path = os.path.dirname(os.path.realpath(__file__))
 
 def readme() -> str:
     with open(r"README.md") as f:
-        README = f.read()
-    return README
+        readme_data = f.read()
+    return readme_data
 
 
 def reqs():
@@ -20,7 +20,7 @@ def reqs():
 
 setup(
     name="PyIpify",
-    packages=['PyIpify', 'PyIpify.syncronous', 'PyIpify.asyncronous'],
+    packages=['PyIpify', 'PyIpify.synchronous', 'PyIpify.asynchronous'],
     version="0.0.1",
     setup_requires=['setuptools_scm'],
     license="MIT",
@@ -29,7 +29,9 @@ setup(
     author_email="sigireddybalasai@gmail.com",
     url="https://github.com/SigireddyBalasai/ipify",
     download_url="https://github.com/SigireddyBalasai/AsyncPywhatKit/archive/refs/tags/1.0.tar.gz",
-    keywords=["ipify", "ip", "ip address", "ipify.org", "ipify api", "ipify python", "ipify python library", "ipify python api", "ipify python library", "ipify python api", "ipify python package", "ipify","ipify cli","ipify asyncronous",'ipify syncronous'],
+    keywords=["ipify", "ip", "ip address", "ipify.org", "ipify api", "ipify python", "ipify python library",
+              "ipify python api", "ipify python library", "ipify python api", "ipify python package", "ipify",
+              "ipify cli", "ipify asynchronous", 'ipify synchronous'],
     install_requires=reqs(),
     include_package_data=True,
     long_description=readme(),
