@@ -6,12 +6,14 @@ dir_path = os.path.dirname(os.path.realpath(__file__))
 
 
 def readme() -> str:
+    """This will read the readme file"""
     with open(r"README.md") as f:
         readme_data = f.read()
     return readme_data
 
 
 def reqs():
+    """THis will read the requirements file"""
     print(dir_path)
     with open(str(pathlib.Path(dir_path) / "requirements.txt"), "r") as f:
         requirements = [line.strip() for line in f]
