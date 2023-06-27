@@ -1,3 +1,4 @@
+"""This module contains the function for finding the public IPv6 address of the system."""
 import requests
 
 
@@ -9,7 +10,7 @@ def find_ipv6():
         str: The IPv6 address of the client.
 
         Example:
-            >>> from PyIpify.synchronous import find_ipv6
+            >>> from py_ipify.synchronous import find_ipv6
             >>> find_ipv6()
     """
-    return requests.get('https://api6.ipify.org?format=json').json()['ip']
+    return requests.get('https://api6.ipify.org?format=json',timeout=15).json()['ip']

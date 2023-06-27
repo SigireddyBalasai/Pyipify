@@ -1,3 +1,4 @@
+"""This module contains the asynchronous function for finding the public IPv6 address"""
 import aiohttp
 
 
@@ -10,9 +11,10 @@ async def find_ipv6():
 
         Example:
             >>> import asyncio
-            >>> from PyIpify.asynchronous import find_ipv6
+            >>> from py_ipify.asynchronous import find_ipv6
             >>> asyncio.run(find_ipv6())
 
     """
-    async with aiohttp.ClientSession() as session, session.get('https://api6.ipify.org?format=json') as response:
-        return (await response.json())['ip']
+    async with aiohttp.ClientSession() as session:
+        async with session.get('https://api6.ipify.org?format=json') as response:
+            return (await response.json())['ip']

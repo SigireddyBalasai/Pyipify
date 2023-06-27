@@ -1,29 +1,33 @@
-from setuptools import setup
-import pathlib
+"""
+Setup file for the pyipify package.
+"""
 import os
+import pathlib
+
+from setuptools import setup
 
 dir_path = os.path.dirname(os.path.realpath(__file__))
 
 
 def readme() -> str:
     """This will read the readme file"""
-    with open(r"README.md") as f:
-        readme_data = f.read()
+    with open(str(pathlib.Path(dir_path) / "README.md"), encoding='utf-8') as file:
+        readme_data = file.read()
     return readme_data
 
 
 def reqs():
     """THis will read the requirements file"""
     print(dir_path)
-    with open(str(pathlib.Path(dir_path) / "requirements.txt"), "r") as f:
-        requirements = [line.strip() for line in f]
+    with open(str(pathlib.Path(dir_path) / "requirements.txt"), "r", encoding='utf-8') as file:
+        requirements = [line.strip() for line in file]
         return requirements
 
 
 setup(
-    name="PyIpify",
-    packages=['PyIpify', 'PyIpify.synchronous', 'PyIpify.asynchronous'],
-    version="0.0.1",
+    name="pyipify",
+    packages=['pyipify', 'pyipify.synchronous', 'pyipify.asynchronous'],
+    version="0.0.3.1",
     setup_requires=['setuptools_scm'],
     license="MIT",
     description="A simple python library to find the public ip address of the system.",
@@ -31,9 +35,10 @@ setup(
     author_email="sigireddybalasai@gmail.com",
     url="https://github.com/SigireddyBalasai/ipify",
     download_url="https://github.com/SigireddyBalasai/AsyncPywhatKit/archive/refs/tags/1.0.tar.gz",
-    keywords=["ipify", "ip", "ip address", "ipify.org", "ipify api", "ipify python", "ipify python library",
-              "ipify python api", "ipify python library", "ipify python api", "ipify python package", "ipify",
-              "ipify cli", "ipify asynchronous", 'ipify synchronous'],
+    keywords=["ipify", "ip", "ip address", "ipify.org", "ipify api", "ipify python",
+              "ipify python library", "ipify python api", "ipify python library",
+              "ipify python api", "ipify python package",
+              "ipify", "ipify cli", "ipify asynchronous", 'ipify synchronous'],
     install_requires=reqs(),
     include_package_data=True,
     long_description=readme(),

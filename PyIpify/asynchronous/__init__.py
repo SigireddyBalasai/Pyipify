@@ -1,2 +1,3 @@
-from find_ipv4 import find_ipv4
-from find_ipv6 import find_ipv6
+"""This module contains asyncronous code of ipify"""
+from .find_ipv4 import find_ipv4
+from .find_ipv6 import find_ipv6
